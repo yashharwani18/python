@@ -1,7 +1,5 @@
 A = int(input(""))
 B = int(input(""))
 print(A,B)
-temp=A
-A=B
-B=temp
+a,b=b,a
 print(A,B)
