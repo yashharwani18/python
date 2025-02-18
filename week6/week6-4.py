@@ -7,8 +7,9 @@ food = [
     ("Pani Puri", 50)
 ]
 
-food_swap = [(price,item) for item,price in food]
-food_swap.sort(reverse=True)
-sort_food = [(item,price) for price,item in food_swap]
-for item in sort_food:
+import operator
+food.sort(key=operator.itemgetter(1),reverse=True)
+
+for item in food:
     print(item)
+
