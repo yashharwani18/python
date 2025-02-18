@@ -17,7 +17,7 @@ def sort_by_salary(emp_list):
 def find_highest_salary(emp_list):
     return max(emp_list, key=itemgetter(4))
     
-def find_highest_salary_in_dep(emp_list):
+def find_highest_salary_in_dep(emp_list,dept_name):
     temp_list= [emp[4] for emp in emp_list if emp[3]==dept_name]
     return max(temp_list)
     
@@ -34,12 +34,12 @@ def update_salary(emp_list,dept_id,new_salary):
 
     
 dept_name=input("enter dept name")
-dept_id=input("enter dept id")
-salary=input("enter salary")
+dept_id=int(input("enter dept id"))
+salary=int(input("enter salary"))
 print(filter_by_dept(employees,dept_name))
 print(sort_by_salary(employees))
 print(find_highest_salary(employees))
-print(find_highest_salary_in_dep(employees))
+print(find_highest_salary_in_dep(employees,dept_name))
 updated_employees = update_salary(employees, dept_id, salary)
 for emp in updated_employees:
     print(emp)
