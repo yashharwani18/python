@@ -5,5 +5,5 @@ def reverse_list(n):
     reversed_part = reverse_list(n)  
     reversed_part.insert(0, temp)  
     return reversed_part 
-num = list(input("Enter a positive integer: "))
+num = list(input())
 print(reverse_list(num))
